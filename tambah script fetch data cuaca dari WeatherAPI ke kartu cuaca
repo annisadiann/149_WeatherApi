@@ -1,0 +1,23 @@
+    <script>
+        $(document).ready(function(){
+            const creativeApiUrl = "http://api.weatherapi.com/v1/current.json?key=287389e7698c4b8abda64141250810&q=Yogyakarta&aqi=no";
+            $.ajax({
+                url: creativeApiUrl,
+                method: "GET",
+                success: function(data) {
+                    $('#card-city').text(data.location.name);
+                    $('#card-region-country').text(data.location.region + ', ' + data.location.country);
+                    $('#card-temp').html(Math.round(data.current.temp_c) + '&deg;');
+                    $('#card-condition').text(data.current.condition.text);
+                    $('#card-icon').attr('src', 'https:' + data.current.condition.icon);
+                    $('#card-provinsi').text(data.location.region);
+                    $('#card-lat').text(data.location.lat);
+                    $('#card-lon').text(data.location.lon);
+                },
+                error: function(error) {
+                    console.log("Error saat mengambil data untuk kartu kreatif:", error);
+                    $('#card-city').text("Gagal memuat data");
+                }
+            });
+        });
+    </script>
