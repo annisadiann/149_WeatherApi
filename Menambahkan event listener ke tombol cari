@@ -1,0 +1,22 @@
+        // Menambahkan event listener ke tombol cari
+        $('#search-button').on('click', function() {
+            const kotaPilihan = $('#city-input').val();
+            if (kotaPilihan) {
+                fetchWeather(kotaPilihan);
+            } else {
+                alert("Mohon masukkan nama kota terlebih dahulu.");
+            }
+        });
+    </script>
+    <script>
+        // ... (Fungsi fetchWeather dan event listener 'click' ada di sini) ...
+
+        // Opsional: Memungkinkan pencarian dengan menekan tombol "Enter"
+        $('#city-input').on('keypress', function(e) {
+            if (e.which === 13) {
+                $('#search-button').click();
+            }
+        });
+    </script>
+</body>
+</html>
