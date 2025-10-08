@@ -1,0 +1,26 @@
+</head>
+    </body>
+</html>
+<div class="search-container">
+        <input type="text" id="city-input" placeholder="Masukkan Nama Kota...">
+        <button id="search-button">Cari</button>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+ <div class="weather-card">
+        <div class="location">
+            <h2 class="city" id="card-city">Memuat...</h2>
+            <p class="region-country" id="card-region-country">-</p>
+        </div>
+        <div class="main-info">
+            <img id="card-icon" src="" alt="Weather Icon">
+            <div class="temp" id="card-temp">-&deg;</div>
+        </div>
+        <p class="condition" id="card-condition">-</p>
+        <div class="details">
+            <div><b>PROVINSI</b><br><span id="card-provinsi">-</span></div>
+            <div><b>LATITUDE</b><br><span id="card-lat">-</span></div>
+            <div><b>LONGITUDE</b><br><span id="card-lon">-</span></div>
+        </div>
+    </div>
